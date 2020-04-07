@@ -1,18 +1,16 @@
 backports.cached_property
 =========================
 
-.. image:: https://travis-ci.com/penguinolog/backports.cached-property.svg?branch=master
-    :target: https://travis-ci.com/penguinolog/backports.cached-property
-.. image:: https://dev.azure.com/penguinolog/backports.cached-property/_apis/build/status/python-useful-helpers.exec-helpers?branchName=master
-    :target: https://dev.azure.com/penguinolog/backports.cached-property/_build
-.. image:: https://img.shields.io/pypi/v/exec-helpers.svg
-    :target: https://pypi.python.org/pypi/exec-helpers
-.. image:: https://img.shields.io/pypi/pyversions/exec-helpers.svg
-    :target: https://pypi.python.org/pypi/exec-helpers
-.. image:: https://img.shields.io/pypi/status/exec-helpers.svg
-    :target: https://pypi.python.org/pypi/exec-helpers
-.. image:: https://img.shields.io/github/license/penguinolog/backports.cached-property.svg
-    :target: https://raw.githubusercontent.com/penguinolog/backports.cached-property/master/LICENSE
+.. image:: https://travis-ci.com/penguinolog/backports.cached_property.svg?branch=master
+    :target: https://travis-ci.com/penguinolog/backports.cached_property
+.. image:: https://img.shields.io/pypi/v/backports.cached-property.svg
+    :target: https://pypi.python.org/pypi/backports.cached-property
+.. image:: https://img.shields.io/pypi/pyversions/backports.cached-property.svg
+    :target: https://pypi.python.org/pypi/backports.cached-property
+.. image:: https://img.shields.io/pypi/status/backports.cached-property.svg
+    :target: https://pypi.python.org/pypi/backports.cached-property
+.. image:: https://img.shields.io/github/license/penguinolog/backports.cached_property.svg
+    :target: https://raw.githubusercontent.com/penguinolog/backports.cached_property/master/LICENSE
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/ambv/black
 
