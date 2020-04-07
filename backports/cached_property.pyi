@@ -11,7 +11,6 @@ from typing import overload
 _T = TypeVar("_T")
 _S = TypeVar("_S")
 
-
 # noinspection PyPep8Naming
 class cached_property(Generic[_T]):
     func: Callable[[Any], _T]
