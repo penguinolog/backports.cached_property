@@ -6,11 +6,7 @@
 .cache/*
 .pytest_cache/*
 
-### Generated version
-/exec_helpers/_version.py
-
 ### Generated code
-/exec_helpers/**/*.c
 /pip-wheel-metadata
 ### TortoiseGit template
 # Project-level settings

@@ -1,0 +1,13 @@
+include *.rst LICENSE requirements.txt
+global-include *.pyx *.pxd
+global-exclude *.c
+exclude Makefile
+prune tools
+exclude .travis.yml appveyor.yml azure-pipelines.yml .pyup.yml
+exclude tox.ini pytest.ini .coveragerc .pylintrc
+exclude .gitignore .dockerignore
+prune test
+prune .github
+prune .azure_pipelines
+prune docs
+exclude CODEOWNERS CODE_OF_CONDUCT.md _config.yml
