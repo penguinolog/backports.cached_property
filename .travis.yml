@@ -5,6 +5,7 @@ dist: bionic
 install:
   - &upgrade_python_toolset pip install --upgrade pip setuptools wheel
   - &install_test_deps pip install --upgrade -r pytest_requirements.txt
+  - &install_deps pip install -r requirements.txt
 
 _python:
   - &python36
@@ -38,6 +39,7 @@ jobs:
       name: "PyLint"
       install:
         - *upgrade_python_toolset
+        - *install_deps
         - pip install --upgrade "pylint >= 2.3" isort[pyproject,requirements]
       script:
         - python setup.py --version clean
@@ -89,6 +91,7 @@ jobs:
         - docker
       install:
         - *upgrade_python_toolset
+        - *install_deps
         - pip install -U --upgrade-strategy=eager --no-cache-dir twine
       before_deploy:
         - pip install -U wheel
@@ -102,7 +105,7 @@ jobs:
             secure: "Zk+ZC94bNx+N64AwzpSjbzDMM7mBnZb8GTmPcRBNYRD+g1+WaiK9G+fm/yzI3aEw3ryokgU94ZjKkW938YzqojrXPafDqSH4nf6SVUsiDRoJ25ZpK5C1PpSaCotjNzhr1MTZyP019dKG1rVFmr9zK87zvxWFj3vUfOyemj3tAALASBgrxbiSRXTm+B06y6/hhMWl/Jq2dzAin+Ss2wm02MI3Q+NlGAHCRl/c1luTZz4ye+9Nf9BO8Nu5ue3QsntpP/beLAkiVPhC/e35gfOy0G7/Ab/IkLpLs5h6UutTXMx5FEGwHSFjQlkUbpA1bjXEvu52/JR7yXdoGnwZiv6k4zIViRorln+VaG9bTMnnqfNz5HkvZ+KBtYk5YiC5fx/ozXsr8Z/3CL8F3Pv6F2IYeFSR0ftjypKfDjfiu02WUbFnkqlAKX2SvUx5nL7YnhFdjK6cPgl+GRm6mXG2451LyXdihR8mWcEURUAmgRD9kmd7/0+2stKlRJ7wp6Ga0L+Tz4b0oVNdrWJMrCW3uf7qElEa1R5YNOKMyxpS4vyv5AiTrJLI3d+q3+gyrOXh9tnujEWSCAMWbyUCFHGGxaA8Q1ER1V2gVLy3+SCivpDYZHhhmFavZgmjIuxb8I50IaFs0Yt49DIuBq14y4Eh8kwpuFqUFxz4NvxqlP0vWqdZ4SE="
           on:
             tags: true
-            distributions: sdist
+          distributions: sdist
           skip_upload_docs: true
           skip_existing: true
 
