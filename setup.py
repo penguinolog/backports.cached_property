@@ -47,7 +47,7 @@ setuptools.setup(
     author="Aleksei Stepanov",  # Python Software Foundation (original code author: Nick Coghlan)
     author_email="penguinolog@gmail.com",
     maintainer="Aleksei Stepanov penguinolog@gmail.com",
-    url="https://github.com/penguinolog/backports.cached-property",
+    url="https://github.com/penguinolog/backports.cached_property",
     license="MIT License",
     description="cached_property() - computed once per instance, cached as attribute",
     long_description=LONG_DESCRIPTION,

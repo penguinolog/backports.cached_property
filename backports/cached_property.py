@@ -23,7 +23,7 @@ else:
     _S = TypeVar("_S")
 
     # noinspection PyPep8Naming
-    class cached_property:  # NOSONAR  # pylint: disable=invalid-name
+    class cached_property:  # NOSONAR  # pylint: disable=invalid-name  # noqa: N801
         """Cached property implementation.
 
         Transform a method of a class into a property whose value is computed once
@@ -34,12 +34,14 @@ else:
         """
 
         def __init__(self, func: Callable[[Any], _T]) -> None:
+            """Cached property implementation."""
             self.func = func
             self.attrname: Optional[str] = None
             self.__doc__ = func.__doc__
             self.lock = RLock()
 
         def __set_name__(self, owner: Type[Any], name: str) -> None:
+            """Assign attribute name and owner."""
             if self.attrname is None:
                 self.attrname = name
             elif name != self.attrname:
