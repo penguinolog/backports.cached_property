@@ -26,8 +26,6 @@ else:
 
     # noinspection PyPep8Naming
     class cached_property:  # NOSONAR  # pylint: disable=invalid-name  # noqa: N801
-        __slots__ = ('func', 'attrname', 'lock', '__doc__')
-
         """Cached property implementation.
 
         Transform a method of a class into a property whose value is computed once
@@ -36,6 +34,8 @@ else:
         Useful for expensive computed properties of instances
         that are otherwise effectively immutable.
         """
+
+        __slots__ = ('func', 'attrname', 'lock', '__doc__')
 
         def __init__(self, func: Callable[[Any], _T]) -> None:
             """Cached property implementation."""
