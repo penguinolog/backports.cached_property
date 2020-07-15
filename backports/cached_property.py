@@ -35,8 +35,6 @@ else:
         that are otherwise effectively immutable.
         """
 
-        __slots__ = ('func', 'attrname', 'lock', '__doc__')
-
         def __init__(self, func: Callable[[Any], _T]) -> None:
             """Cached property implementation."""
             self.func = func
