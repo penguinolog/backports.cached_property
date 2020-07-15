@@ -9,8 +9,10 @@ __all__ = ("cached_property",)
 from sys import version_info
 
 if version_info >= (3, 8):
+    # Standard Library
     from functools import cached_property  # pylint: disable=no-name-in-module
 else:
+    # Standard Library
     from threading import RLock
     from typing import Any
     from typing import Callable
@@ -24,6 +26,8 @@ else:
 
     # noinspection PyPep8Naming
     class cached_property:  # NOSONAR  # pylint: disable=invalid-name  # noqa: N801
+        __slots__ = ('func', 'attrname', 'lock', '__doc__')
+
         """Cached property implementation.
 
         Transform a method of a class into a property whose value is computed once
