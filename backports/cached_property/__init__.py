@@ -52,7 +52,7 @@ else:
                     f"({self.attrname!r} and {name!r})."
                 )
 
-        def __get__(self, instance, owner=None) -> Any:
+        def __get__(self, instance: Optional[_S], owner: Optional[Type[Any]] = None) -> Any:
             """Property-like getter implementation.
 
             :return: property instance if requested on class or value/cached value if requested on instance.
