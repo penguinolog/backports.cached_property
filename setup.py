@@ -62,9 +62,7 @@ setuptools.setup(
     # Blacklist setuptools 34.0.0-34.3.2 due to https://github.com/pypa/setuptools/issues/951
     # Blacklist setuptools 36.2.0 due to https://github.com/pypa/setuptools/issues/1086
     setup_requires=[
-        "setuptools >= 21.0.0,!=24.0.0,"
-        "!=34.0.0,!=34.0.1,!=34.0.2,!=34.0.3,!=34.1.0,!=34.1.1,!=34.2.0,!=34.3.0,!=34.3.1,!=34.3.2,"
-        "!=36.2.0",
+        "setuptools >= 42.0",  # setuptools.scm + pyproject.toml
         "wheel",
         "setuptools_scm[toml]>=3.4",
     ],
