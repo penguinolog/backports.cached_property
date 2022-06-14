@@ -55,17 +55,6 @@ setuptools.setup(
     classifiers=CLASSIFIERS,
     keywords=KEYWORDS,
     python_requires=">=3.6.0",
-    # While setuptools cannot deal with pre-installed incompatible versions,
-    # setting a lower bound is not harmful - it makes error messages cleaner. DO
-    # NOT set an upper bound on setuptools, as that will lead to uninstallable
-    # situations as progressive releases of projects are done.
-    # Blacklist setuptools 34.0.0-34.3.2 due to https://github.com/pypa/setuptools/issues/951
-    # Blacklist setuptools 36.2.0 due to https://github.com/pypa/setuptools/issues/1086
-    setup_requires=[
-        "setuptools >= 42.0",  # setuptools.scm + pyproject.toml
-        "wheel",
-        "setuptools_scm[toml]>=3.4",
-    ],
     install_requires=REQUIRED,
     use_scm_version={"write_to": f"{PACKAGE_NAME.replace('.', '/')}/_version.py"},
 )
