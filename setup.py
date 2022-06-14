@@ -69,4 +69,5 @@ setuptools.setup(
         "setuptools_scm[toml]>=3.4",
     ],
     install_requires=REQUIRED,
+    use_scm_version={"write_to": f"{PACKAGE_NAME.replace('.', '/')}/_version.py"},
 )

@@ -10,8 +10,8 @@
 /exec_helpers/_version.py
 
 ### Generated code
-/exec_helpers/**/*.c
 /pip-wheel-metadata
+/backports/cached_property/_version.py
 ### TortoiseGit template
 # Project-level settings
 /.tgitconfig

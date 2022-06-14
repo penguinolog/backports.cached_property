@@ -7,6 +7,11 @@ __all__ = ("cached_property",)
 
 # Standard Library
 from sys import version_info
+try:
+    # Local Implementation
+    from ._version import version as __version__
+except ImportError:
+    pass
 
 if version_info >= (3, 8):
     # Standard Library
