@@ -19,11 +19,7 @@ if version_info >= (3, 8):
 else:
     # Standard Library
     from threading import RLock
-    from typing import Any
-    from typing import Callable
-    from typing import Optional
-    from typing import Type
-    from typing import TypeVar
+    from typing import Any, Callable, Optional, Type, TypeVar
 
     _NOT_FOUND = object()
     _T = TypeVar("_T")
