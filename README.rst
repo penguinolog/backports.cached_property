@@ -17,11 +17,11 @@ backports.cached_property
 Introduction
 ------------
 
-Python 3.8 adds a great decorator to functools: cached_property.
+Python 3.8 adds a great decorator to functools: ``cached_property``.
 Technically all required APIs were available since Python 3.6, but
 releases until 3.8 don't have it and users need to live with this reality.
 
-Therefore, this package backports this feature to python 3.6 and 3.7.
+Therefore, this package backports said feature to python 3.6 and 3.7.
 
 How to use
 ----------
@@ -32,12 +32,12 @@ Simply do
 
     from backports.cached_property import cached_property
 
-And then Python 3.8 documentation will work (see copy below).
+and it will work as documented upstream (see copy below).
 
-The cached_property implementation for Python < 3.8 is very close to that of the
-future standard library.
-For Python >= 3.8, the actual cached_property from functools is passed through,
-of course.
+The implementation of our ``cached_property`` backport is very close to that
+of the future Python 3.8 standard library.
+For Python >= 3.8, the actual ``cached_property`` from functools is passed
+through, of course.
 
 class cached_property
 ---------------------
@@ -61,7 +61,7 @@ computed properties of instances that are otherwise effectively immutable.
        def variance(self):
            return statistics.variance(self._data)
 
-
+.. FIXME GH syntax highlighting doesn't nicely handle this directive?
 .. note::
 
   This decorator requires that the ``__dict__`` attribute on each instance
