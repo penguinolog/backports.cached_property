@@ -21,7 +21,7 @@ Python 3.8 adds a great decorator to functools: ``cached_property``.
 Technically all required APIs were available since Python 3.6, but
 releases until 3.8 don't have it and users need to live with this reality.
 
-Therefore, this package backports said feature to python 3.6 and 3.7.
+Therefore, this package backports said feature to Python 3.6 and 3.7.
 
 How to use
 ----------
