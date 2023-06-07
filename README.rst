@@ -61,7 +61,7 @@ computed properties of instances that are otherwise effectively immutable.
        def variance(self):
            return statistics.variance(self._data)
 
-.. FIXME GH syntax highlighting doesn't nicely handle this directive?
+.. FIXME GitHub RST renderer doesn't nicely handle this directive?
 .. note::
 
   This decorator requires that the ``__dict__`` attribute on each instance
