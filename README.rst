@@ -40,7 +40,7 @@ For Python >= 3.8, the actual ``cached_property`` from functools is passed
 through, of course.
 
 class cached_property
----------------------
+*********************
 
 Transform a method of a class into a property whose value is computed once
 and then cached as a normal attribute for the life of the instance. Similar
@@ -61,8 +61,8 @@ computed properties of instances that are otherwise effectively immutable.
        def variance(self):
            return statistics.variance(self._data)
 
-.. FIXME GitHub RST renderer doesn't nicely handle this directive?
-.. note::
+Note
+++++
 
   This decorator requires that the ``__dict__`` attribute on each instance
   be a mutable mapping. This means it will not work with some types, such as
