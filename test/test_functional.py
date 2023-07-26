@@ -114,6 +114,20 @@ class TestCachedProperty(unittest.TestCase):
         ):
             item.cost
 
+    def test_clear_cached(self):
+        item = CachedCostItem()
+        with self.assertRaises(AttributeError):
+            del item.cost
+        self.assertEqual(item.cost, 2)
+        self.assertEqual(item.cost, 2)
+        del item.cost
+        self.assertEqual(item.cost, 3)
+        self.assertEqual(item.cost, 3)
+        del item.cost
+        with self.assertRaises(AttributeError):
+            del item.cost
+        self.assertEqual(item.cost, 4)
+
     def test_immutable_dict(self):
         class MyMeta(type):
             """Test metaclass."""
